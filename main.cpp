@@ -22,6 +22,11 @@ problem1_fd : public fd_newton_solver
 // sin (cos (x))
 // for either double or complex input
 
+template <typename T>
+T fun(const T x) 
+{
+ return sin(cos(x));
+}
 
 // Define the method "eval" for both
 // classes problem1_cs and problem1_fd 
