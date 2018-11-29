@@ -18,9 +18,11 @@ abstract_newton_solver::solve (const double x0)
 
 // Implement the method "fd_newton_solver::prime" using centered finite
 // differences with  step "delta"
-// double
-// fd_newton_solver::prime (const double x)
-// { ... }
+double
+fd_newton_solver::prime (const double x)
+{ 
+  return((eval(x+delta)-eval(x-delta))/(2*delta));
+}
 
 
 // Implement the method "cs_newton_solver::prime" using the
