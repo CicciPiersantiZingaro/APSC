@@ -27,7 +27,10 @@ fd_newton_solver::prime (const double x)
 
 // Implement the method "cs_newton_solver::prime" using the
 // complex step method differences with  step "delta"
-// double
-// cs_newton_solver::prime (const double x)
-// { ... }
+double
+cs_newton_solver::prime (const double x)
+{ 
+  std::complex<double> z(x,delta);
+  return(std::imag(eval(z)/delta));
+}
 
