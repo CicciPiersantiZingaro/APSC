@@ -31,6 +31,26 @@ T fun(const T x)
 // Define the method "eval" for both
 // classes problem1_cs and problem1_fd 
 
+double
+problem1_cs::eval(const double x)
+{
+  //return fun<double>(x);
+  return fun(x);
+}
+
+std::complex<double>
+problem1_cs::eval(const std::complex<double> x)
+{
+  //return fun<std::complex<double>>(x);
+  return fun(x);
+}
+
+double
+problem1_fd::eval(const double x)
+{
+  //return fun<double>(x);
+  return fun(x);
+}
 
 int
 main ()
